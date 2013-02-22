@@ -294,6 +294,7 @@ en:
     supress_reply_directly_below: "Don't show replies button below a post when the reply is directly below"
     allow_index_in_robots_txt: "Site should be indexed by search engines (update robots.txt)"
     email_domains_blacklist: "A pipe-delimited list of email domains that are not allowed. Example: mailinator.com|trashmail.net"
+    version_checks: 'Whether to check for Discourse updates and report them on the admin dashboard.'
 
     port: "If you'd like to specify a port in the URL. Useful in development mode. Leave blank for none."
     force_hostname: "If you'd like to specify a hostname in the URL. Useful in development mode. Leave blank for none."
@@ -338,14 +339,15 @@ en:
     basic_requires_read_posts: "How many posts a user needs to have read to be promoted to basic level"
     basic_requires_time_spent_mins: "How many mins a user needs to have spent reading posts to be promoted to basic level"
 
+    auto_link_images_wider_than: "How wide does an image need to be, to be considered for auto link and lightbox treatment"
+
     email_time_window_mins: "How many minutes we wait before sending a user mail, to give them a chance to see it first."
     flush_timings_secs: "How frequently we flush timing data to the server, in seconds."
-
     max_word_length: "The maximum word length in a topic title"
     title_min_entropy: "The minimum entropy for a topic title"
     body_min_entropy: "The minimum entropy for post body"
-
     new_user_period_days: "How long a user is highlighted as being new, in days."
+    title_fancy_entities: "Convert fancy HTML entities in topic titles"
 
   notification_types:
     mentioned: "%{display_username} mentioned you in %{link}"

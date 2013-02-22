@@ -200,6 +200,7 @@
   section.post-menu-area {
     .discourse-no-touch & {
       opacity: 0.2;
+      @include fade-soft(1s);
     }
   }
 
@@ -322,7 +323,7 @@
       padding: 0 10px 0 0;
       h3 {
         margin: 3px 0 0;
-        font-size: 14px;
+        font-size: 13px;
         line-height: 18px;
       }
 

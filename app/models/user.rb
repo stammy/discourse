@@ -27,7 +27,7 @@ class User < ActiveRecord::Base
   validates_presence_of :email
   validates_uniqueness_of :email
   validate :username_validator
-  validate :email_validator
+  validate :email_validator, :if => :email_changed?
   validate :password_validator
 
   before_save :cook

@@ -9,7 +9,7 @@
 //= require ../../app/assets/javascripts/external/jquery-1.8.2.js
 
 //= require ../../app/assets/javascripts/external/jquery.ui.widget.js
-//= require ../../app/assets/javascripts/external/handlebars-1.0.rc.2.js
+//= require ../../app/assets/javascripts/external/handlebars-1.0.rc.3.js
 //= require ../../app/assets/javascripts/external/ember.js
 
 // Pagedown customizations
@@ -40,6 +40,7 @@
 //= require_tree ../../app/assets/javascripts/discourse/templates
 //= require_tree ../../app/assets/javascripts/discourse/routes
 
+//= require_tree ../../app/assets/javascripts/defer
 
 //= require_tree .
 

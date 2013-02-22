@@ -258,6 +258,9 @@
   .type {
     color: lighten($black, 40%);
   }
+  span.name {
+    color: lighten($black, 40%);
+  }
   .time {
     display: block;
     float: right;
@@ -270,7 +273,7 @@
     margin-right: 10px;
   }
   .title {
-    display: inline-block;
+    display: block;
     margin-bottom: 4px;
     font-size: 14px;
   }

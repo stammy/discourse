@@ -8,8 +8,10 @@ gem 'message_bus', path: 'vendor/gems/message_bus'
 gem 'rails_multisite', path: 'vendor/gems/rails_multisite'
 gem 'simple_handlebars_rails', path: 'vendor/gems/simple_handlebars_rails'
 
+gem 'redcarpet', require: false
 gem 'activerecord-postgres-hstore'
 gem 'acts_as_paranoid'
+gem 'active_attr' # until we get ActiveModel::Model with Rails 4
 gem 'airbrake', '3.1.2' # errbit is broken with 3.1.3 for now
 gem 'clockwork', require: false
 gem 'em-redis'
@@ -20,6 +22,9 @@ gem 'fog', require: false
 gem 'has_ip_address'
 gem 'hiredis'
 gem 'i18n-js'
+# note: for image_optim to correctly work you need
+# sudo apt-get install -y advancecomp gifsicle jpegoptim libjpeg-progs optipng pngcrush
+gem 'image_optim'
 gem 'jquery-rails'
 gem 'multi_json'
 gem 'mustache'
@@ -47,7 +52,7 @@ gem 'slim'  # required for sidekiq-web
 gem 'therubyracer', require: 'v8'
 gem 'thin'
 
-# Gem that enables support for plugins. It is required
+# Gem that enables support for plugins. It is required.
 gem 'discourse_plugin', path: 'vendor/gems/discourse_plugin'
 
 # Discourse Plugins (optional)
@@ -61,8 +66,6 @@ gem 'discourse_emoji', path: 'vendor/gems/discourse_emoji'
 # in production environments by default.
 # allow everywhere for now cause we are allowing asset debugging in prd
 group :assets do
-  gem 'coffee-rails'
-  gem 'coffee-script'  # need this to compile coffee on the fly 
   gem 'sass'
   gem 'sass-rails'
   gem 'turbo-sprockets-rails3'
@@ -74,12 +77,13 @@ group :test do
 end
 
 group :test, :development do
+  gem 'jshint_on_rails'
+  gem 'guard-jshint-on-rails'
   gem 'certified'
   gem 'fabrication'
   gem 'guard-jasmine'
   gem 'guard-rspec' 
   gem 'guard-spork'
-  gem 'image_optim'
   gem 'jasminerice'
   gem 'mocha', require: false
   gem 'rb-fsevent'
